@@ -164,7 +164,7 @@ class DownloadTask
       -metadata album="#{program.title}"
       -metadata genre=Radio
       -metadata year="#{program.effective_date.year}"
-      -acodec libmp3lame -ar 44100 -ab #{bitrate} -ac 2
+      -acodec mp3 -ar 44100 -ab #{bitrate} -ac 2
       #{tempfile}
     )
 
