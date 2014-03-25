@@ -172,6 +172,7 @@ class DownloadTask
 
     FileUtils.mkpath("#{outdir}/#{program.title}")
     File.rename tempfile, "#{outdir}/#{program.title}/#{program.id}.mp3"
+    puts "Save #{outdir}/#{program.title}/#{program.id}.mp3"
 
     notification = {
       :program => {
