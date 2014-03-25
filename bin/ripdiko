@@ -170,8 +170,8 @@ class DownloadTask
 
     system command.join(" ")
 
-    FileUtils.mkpath("#{outdir}/#{program.title}")
-    File.rename tempfile, "#{outdir}/#{program.title}/#{program.id}.mp3"
+    FileUtils.mkpath("#{outdir}/#{program.title.gsub("/", "-")}")
+    File.rename tempfile, "#{outdir}/#{program.title.gsub("/", "-")}/#{program.id}.mp3"
     puts "Save #{outdir}/#{program.title}/#{program.id}.mp3"
 
     notification = {
